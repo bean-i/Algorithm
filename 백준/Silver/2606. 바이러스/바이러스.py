@@ -1,5 +1,4 @@
 import sys
-from collections import deque
 #DFS
 def dfs(graph, r, visited):
   global cnt
