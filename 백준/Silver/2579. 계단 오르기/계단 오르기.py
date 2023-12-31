@@ -1,14 +1,17 @@
-N = int(input())
-stair = [0]*301
-for i in range(N):
-    stair[i]=int(input())
+import sys
 
-DP = [0]*301
-DP[0] = stair[0]
-DP[1] = stair[0]+stair[1]
-DP[2] = max(stair[0]+stair[2], stair[1]+stair[2])
+N = int(sys.stdin.readline())
+s=[0]*301
+d=[0]*301
+for i in range(N):
+  s[i] = int(sys.stdin.readline())
+
+
+d[0] = s[0]
+d[1] = s[0]+s[1]
+d[2] = max(s[0]+s[2], s[1]+s[2])
 
 for i in range(3, N):
-    DP[i] = max(DP[i-3] + stair[i-1] + stair[i], DP[i-2]+stair[i])
+  d[i] = max(s[i-1]+s[i]+d[i-3], s[i]+d[i-2])
 
-print(DP[N-1])
+print(d[N-1])
