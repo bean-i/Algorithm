@@ -9,5 +9,5 @@ for _ in range(N):
   else:
     s[word] = 1
 
-s = sorted(s.items(), key = lambda x:(-x[1], x[0]), reverse=True)
-print(s[-1][0])
+s = sorted(s.items(), key = lambda x:(-x[1], x[0]))
+print(s[0][0])
