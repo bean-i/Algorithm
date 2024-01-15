@@ -6,11 +6,11 @@ right_h = []
 
 for i in range(1, N+1):
   a = int(sys.stdin.readline())
-  if len(left_h) == len(right_h):
+  if i%2 != 0:
     heapq.heappush(left_h, -a)
   else:
     heapq.heappush(right_h, a)
-  if right_h and -left_h[0] > right_h[0]:
+  if left_h and right_h and -left_h[0] > right_h[0]:
     x = -heapq.heappop(left_h)
     y = heapq.heappop(right_h)
     heapq.heappush(left_h, -y)
