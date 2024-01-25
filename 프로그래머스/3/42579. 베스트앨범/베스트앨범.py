@@ -9,11 +9,11 @@ def solution(genres, plays):
             heapq.heappush(dict[i], [-j, k])
             sumplay[i] += j
         else:
-            #재생횟수, 고유번호, 총 재생횟수
+            #재생횟수, 고유번호
             dict[i] = []
             heapq.heappush(dict[i], [-j, k])
             sumplay[i] = j
-
+    
     sorted_sumplay = [k[0] for k in sorted(sumplay.items(), key = lambda x:x[1], reverse=True)]
     
     for key in sorted_sumplay:
