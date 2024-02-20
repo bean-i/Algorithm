@@ -1,15 +1,16 @@
 import sys
 
-def back(start):
-  if len(ans) == M:
-    print(*ans)
+def back(i):
+  if len(lis) == M:
+    print(*lis)
     return
-  for i in range(start, N+1):
-    if i not in ans:
-      ans.append(i)
-      back(i+1)
-      ans.pop()
+  for x in range(i+1, N+1):
+    if x not in lis:
+      lis.append(x)
+      back(x)
+      lis.pop()
 
 N, M = map(int, sys.stdin.readline().split())
-ans = []
-back(1)
+
+lis = []
+back(0)
