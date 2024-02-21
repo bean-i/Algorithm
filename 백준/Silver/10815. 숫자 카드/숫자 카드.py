@@ -1,19 +1,20 @@
 import sys
 
 N = int(sys.stdin.readline())
-sg = list(map(int, sys.stdin.readline().split()))
-a = {}
-for i in sg:
-  a[i] = 0
-  
-M = int(sys.stdin.readline())
-check = list(map(int, sys.stdin.readline().split()))
-b = {}
-for i in check:
-  b[i] = 0
+A = list(map(int, sys.stdin.readline().split()))
 
-for key in check:
-  if key in a:
-    print(1, end=' ')
+M = int(sys.stdin.readline())
+q = list(map(int, sys.stdin.readline().split()))
+
+dic = {}
+for i in A:
+  dic[i] = 1
+
+answer = []
+for i in q:
+  if i in dic:
+    answer.append(1)
   else:
-    print(0, end=' ')
+    answer.append(0)
+
+print(*answer)
