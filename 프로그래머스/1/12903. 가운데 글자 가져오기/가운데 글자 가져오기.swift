@@ -1,15 +1,10 @@
 func solution(_ s:String) -> String {
-    var a: Int
     var result: String = ""
     
     if s.count % 2 == 0 {
-        a = s.count/2 - 1
-        result += String(s[s.index(s.startIndex, offsetBy: a)])
-        a += 1
-        result += String(s[s.index(s.startIndex, offsetBy: a)])
+        result += String(Array(s)[(s.count/2)-1...(s.count/2)])
     } else {
-        a = s.count/2
-        result += String(s[s.index(s.startIndex, offsetBy: a)])
+        result += String(Array(s)[s.count/2])
     }
     return result
 }
