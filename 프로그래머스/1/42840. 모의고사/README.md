@@ -1,10 +1,10 @@
 # [level 1] 모의고사 - 42840 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42840#) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42840?language=swift) 
 
 ### 성능 요약
 
-메모리: 10.3 MB, 시간: 4.13 ms
+메모리: 16.9 MB, 시간: 5.65 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 6일 18:12:55
+2024년 07월 05일 15:14:20
 
 ### 문제 설명
 
